@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "foodswipe-app",
+    "name": "FoodSwipe",
     "slug": "foodswipe-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,10 +23,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.monwar.foodswipeapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

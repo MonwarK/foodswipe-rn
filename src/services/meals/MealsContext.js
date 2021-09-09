@@ -1,6 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
-import { useEffect } from 'react/cjs/react.development';
-import { retrieveMeals } from './MealsService';
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import * as firebase from "firebase";
 import { AuthenticationContext } from '../authentication/AuthenticationContext';
 
@@ -16,7 +14,7 @@ export const MealsContextProvider = ({ children }) => {
       firebase
       .firestore()
       .collection("meals")
-      .onSnapshot(snapshot =>
+      .onSnapshot((snapshot) =>
         setMeals(
           snapshot.docs.map(doc => ({
             id: doc.id,
@@ -29,7 +27,7 @@ export const MealsContextProvider = ({ children }) => {
       .firestore()
       .collection("saved")
       .where("uid", "==", user.uid)
-      .onSnapshot(snapshot =>
+      .onSnapshot((snapshot) =>
         setSavedList(
           snapshot.docs.map(doc => ({
             id: doc.id,

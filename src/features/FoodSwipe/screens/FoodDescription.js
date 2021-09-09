@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, Text, ScrollView, FlatList, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import { Card, Colors, List } from 'react-native-paper'
 import styled from 'styled-components'
 import { MealsContext } from "../../../services/meals/MealsContext"
@@ -30,7 +30,7 @@ const FoodDescription = ({ route }) => {
             expanded={true}
             right={() => null}
           >
-            <List.Item title={description} titleNumberOfLines={5}/>
+            <List.Item title={description} titleNumberOfLines={5} />
           </List.Accordion>
 
           <List.Accordion 
@@ -38,7 +38,7 @@ const FoodDescription = ({ route }) => {
             style={Styles.white}
           >
             {ingredients.map((ingredient, i) =>
-              <List.Item key={i} title={ingredient} />
+              <List.Item key={i} title={ingredient} titleNumberOfLines={5} />
             )}
           </List.Accordion>
 
@@ -48,7 +48,7 @@ const FoodDescription = ({ route }) => {
               style={Styles.white}
             >
               {methods.map((method, i) =>
-                <List.Item key={i} title={`${i + 1}) ${method}`} />
+                <List.Item key={i} title={`${i + 1}) ${method}`} titleNumberOfLines={15} />
               )}
             </List.Accordion>
           )}

@@ -23,6 +23,9 @@ const SavedListScreen = ({ navigation }) => {
           renderItem={({item}) => 
             <List.Item onPress={() => navigation.navigate("SavedDescriptionScreen", { saved: true, id: item.foodId })} title={item.name} left={() => <ListImage source={{ uri: item.imageUrl}} />} />
           }
+          contentContainerStyle={{
+            paddingBottom: 35
+          }}
         />
       </List.Section>
     </SafeArea>

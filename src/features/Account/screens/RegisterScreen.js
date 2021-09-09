@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
-import { View, KeyboardAvoidingView, Platform } from 'react-native'
+import React, { useContext, useState } from 'react'
+import { KeyboardAvoidingView, Platform } from 'react-native'
 import { ActivityIndicator, Button, Colors } from 'react-native-paper'
-import { useState } from 'react/cjs/react.development'
 import { AuthenticationContext } from '../../../services/authentication/AuthenticationContext'
 import { AuthBackground, AuthButton, AuthContainer, AuthInput, AuthTitle, AuthError } from '../components/AccountStyles'
 
